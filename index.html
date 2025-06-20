@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prodigy InfoTech-Tak 04</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #cbd5e1;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bcd4;
+      margin: 20px auto;
+      display: block;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      color: #00bcd4;
+      margin-bottom: 40px;
+    }
+    .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .project-card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-top: 0;
+    }
+    .project-card a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0e1a2b;
+      color: #94a3b8;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #00bcd4;
+      font-size: 1.4em;
+      text-decoration: none;
+    }
+  </style>
+  <style>
+    .navbar {
+  background: #1e293b;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+    .nav-title {
+      margin: 0;
+      color: #00bcd4;
+      font-size: 1.5em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+    header {
+      padding-top: 140px;
+    }
+  </style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1e293b;
+        display: none;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5em;
+      }
+    }
+    .menu-toggle {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const links = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('open');
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="nav-title">Meena</h1>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header id="home">
+    <img src="profile.jpg" alt="Meena's Photo" class="profile-img">
+    <h1>Meena S</h1>
+    <p>Web Developer | Front-End Specialist</p>
+  </header>
+
+  <section class="section about" id="about">
+  <h2>About</h2>
+  <p>I am currently studying BE Computer Science at SRM Easwari Engineering College and expecting to graduate in 2028. I have completed an internship at Prodigy Infotech, where I gained hands-on experience in real-world projects. My core skills include HTML, CSS, JavaScript, and GitHub.</p>
+</section>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Responsive Landing Page</h3>
+        <p>A mobile-first landing page built with HTML and CSS.</p>
+        <a href="https://meena20607.github.io/meena-task1/" target="_blank">🔗 Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>Tic-Tac-Toe Game</h3>
+        <p>Classic tic-tac-toe game built using JavaScript.</p>
+        <a href="https://meena20607.github.io/meena-task03/" target="_blank">🔗 Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>Stopwatch Web App</h3>
+        <p>A custom stopwatch application with clean UI.</p>
+        <a href="https://lnkd.in/gWzJq4yr" target="_blank">🔗 Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p style="text-align: center;">You can reach me at <strong>20607.meena@gmail.com</strong></p>
+    
+  <div class="social-icons">
+  <a href="https://github.com/meena20607" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/meena-s-774255328" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Meena S. All rights reserved.</p>
+  </footer>
+</body>
+</html>
